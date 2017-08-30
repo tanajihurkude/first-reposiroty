@@ -13,6 +13,6 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
     <flow name="helloworldFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/helloworld" doc:name="HTTP"/>
         <set-payload doc:name="Set Payload" value="Hello World!"/>
-        <logger level="INFO" doc:name="Logger" message="#[payload]"/>
+        <logger level="INFO" doc:name="Logger" message="Log: #[payload]"/>
     </flow>
 </mule>
